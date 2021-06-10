@@ -34,5 +34,5 @@ spec:
             - name: PGPASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mysecret
+                  name: pgpassword
                   key: PGPASSWORD
