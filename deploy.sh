@@ -10,7 +10,7 @@ docker push djedjethai/kubclient:$SHA
 docker push djedjethai/kubserver:$SHA
 docker push djedjethai/kubworker:$SHA
 
-kubctl apply -f k8s
+kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=djedjethai/kubserver:$SHA
 kubectl set image deployments/client-deployment client=djedjethai/kubclient:$SHA
 kubectl set image deployments/worker-deployment worker=djedjethai/kubworker:$SHA
